@@ -81,6 +81,7 @@ class ProjectController extends Controller
     {
         $formData = $request->validated();
         $formData['slug']= $project->slug;
+
         if ($project->title !== $formData['title']) {
             //CREATE SLUG
             $slug = Project::getSlug($formData['title']);
@@ -90,7 +91,6 @@ class ProjectController extends Controller
 
         //aggiungiamo l'id dell'utente proprietario del post
         $formData['user_id'] = $project->user_id;
-
 
         if ($request->hasFile('image')) {
             if ($project->image){
