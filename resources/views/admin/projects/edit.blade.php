@@ -40,6 +40,10 @@
                 @enderror
             </div>
 
+            <div class="me-3">
+                <img id="uploadPreview" width="100" src="https://via.placeholder.com/300x200" >
+            </div>
+
             <div class="mb-3">
                 <label for="image">Image</label>
                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image" id="image" value="{{old('image', $project->image)}}">

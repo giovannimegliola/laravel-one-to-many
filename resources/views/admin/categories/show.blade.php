@@ -2,15 +2,15 @@
 @section('content')
     <section class="container">
         <h1>{{$category->name}}</h1>
-
-
+        <h3>Project List</h3>
 
         <ul>
-            @foreach ($category->projects as $project)
-            <li>{{$project->title}}</li>
+            @forelse ($category->projects as $project)
+                <li> {{$project->title}}</li>
+            @empty
+                <li>No projects</li>
+            @endforelse
         </ul>
-
-        @endforeach
 
     </section>
 @endsection

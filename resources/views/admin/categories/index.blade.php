@@ -3,14 +3,14 @@
     <section class="container">
         <h1>Categories List</h1>    {{-- cambia tutti i proeject con category --}}
 
-        <a href="{{route('admin.categories.create')}}" class="btn btn-primary my-3"><i class="fa-solid fa-plus"></i> Create new category</a>
+        <a href="{{route('admin.categories.create')}}" class="btn btn-primary my-3"><i class="fa-solid fa-plus"></i> Create new Category</a>
 
         <div>
             <table class="table table-striped border">
 
                 <thead>
                     <tr>
-                        <th>name</th>
+                        <th>Name</th>
                         <th class="text-end px-5 ">Actions</th>
                     </tr>
                 </thead>
